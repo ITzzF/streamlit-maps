@@ -3,7 +3,7 @@ import leafmap.foliumap as leafmap
 
 markdown = """
 A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+<https://github.com/ITzzF/streamlit-maps>
 """
 
 st.sidebar.title("About")

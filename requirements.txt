@@ -4,4 +4,5 @@ leafmap
 owslib
 streamlit
 geemap
-earthengine-api
+# earthengine-api
+zzfdemo

@@ -5,7 +5,7 @@ st.set_page_config(layout="wide")
 
 markdown = """
 A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+<https://github.com/ITzzF/streamlit-maps>
 """
 
 st.sidebar.title("About")
@@ -17,7 +17,7 @@ st.title("Heatmap")
 
 with st.expander("See source code"):
     with st.echo():
-        filepath = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
+        filepath = "./data/us_cities.csv"
         m = leafmap.Map(center=[40, -100], zoom=4)
         m.add_heatmap(
             filepath,

@@ -5,7 +5,7 @@ st.set_page_config(layout="wide")
 
 markdown = """
 A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+<https://github.com/ITzzF/streamlit-maps>
 """
 
 st.sidebar.title("About")
@@ -19,8 +19,8 @@ with st.expander("See source code"):
     with st.echo():
 
         m = leafmap.Map(center=[40, -100], zoom=4)
-        cities = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
-        regions = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_regions.geojson"
+        cities = "./data/us_cities.csv"
+        regions = "./data/us_regions.geojson"
 
         m.add_geojson(regions, layer_name="US Regions")
         m.add_points_from_xy(
