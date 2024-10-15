@@ -27,7 +27,7 @@ col1, col2 = st.columns([4, 1])
 
 
 with col1:
-    ee_authenticate(token_name="EARTHENGINE_TOKEN")
+    # ee_authenticate(token_name="EARTHENGINE_TOKEN")
     Map = geemap.Map()
     in_geojson = "./data/china.geojson"
     vector  = geemap.geojson_to_ee(in_geojson)
