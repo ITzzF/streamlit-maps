@@ -22,6 +22,6 @@ Map = zzfdemo.Map()
     # ('png', 'jpg', 'ZIPPED_GEO_TIFF', 'GEO_TIFF', 'NPY'))
 
 
-with col1:
+# with col1:
     
-    Map.to_streamlit(height=850)
+    # Map.to_streamlit(height=850)

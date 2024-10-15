@@ -3,12 +3,14 @@ import streamlit as st
 import geemap.foliumap as geemap
 
 # geemap.set_proxy(port=7897)
-ee.Initialize()
+@st.cache_data
+def ee_authenticate(token_name="EARTHENGINE_TOKEN"):
+    geemap.ee_initialize(token_name=token_name)
 st.set_page_config(page_title="GEEMAP_Download_sl App",layout="wide"
 )
 
 col1, col2 = st.columns([4, 1])
-Map = geemap.Map()
+
 # with col2:
     # ROI = st.text_input('The google earth engine roi geometry', 'users/yamiletsharon250/wuhan')
     # count = st.number_input("How many image chips to export", 1000)
@@ -25,6 +27,8 @@ Map = geemap.Map()
 
 
 with col1:
+    ee_authenticate(token_name="EARTHENGINE_TOKEN")
+    Map = geemap.Map()
     in_geojson = "./data/china.geojson"
     vector  = geemap.geojson_to_ee(in_geojson)
     roi = vector.filter(ee.Filter.eq('name', '河南省'))
